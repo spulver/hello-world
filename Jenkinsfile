@@ -9,4 +9,11 @@ pipeline {
             }
         }
     }
+    stages {
+        stage('Prod') {
+            steps {
+                echo 'hoppela'
+            }
+        }
+    }
 }
