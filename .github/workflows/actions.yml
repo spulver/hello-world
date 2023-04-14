@@ -10,6 +10,7 @@ jobs:
         run: |
           pwd
           ls -al
+          printenv | sort
       - name: Checkout
         uses: actions/checkout@v1
       - name: Files again
