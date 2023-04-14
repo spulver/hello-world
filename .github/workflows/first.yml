@@ -14,3 +14,7 @@ jobs:
           pwd
           node -v
           npm -v
+      - name: Python Command
+        run: |
+          import platform
+          print(platform)
