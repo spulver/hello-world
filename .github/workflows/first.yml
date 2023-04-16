@@ -6,14 +6,13 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      - name: echo Hello
-        run: echo "Hello World!"
-      - name: multiline script
+      - name: checking os linux
         run: |
           uname -a
           pwd
           node -v
           npm -v
+          code -v
       - name: Python Command
         run: |
           import platform
@@ -22,8 +21,15 @@ jobs:
   run-windows-commands:
     runs-on: windows-latest
     steps:
-      - name: Directory PowerShell
-        run: Get-Location
-      - name: Directory Bash
-        run: pwd
-        shell: bash
+      - name: checking os Windows
+        run: |
+          Get-Location
+          code -v
+  run-mac-commands:
+    runs-on: macos-latest
+    steps: 
+      - name: checking os Mac
+        run: |
+          uname -a
+          code -v
+
