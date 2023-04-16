@@ -12,7 +12,7 @@ jobs:
           pwd
           node -v
           npm -v
-          code -v
+          ruby -v
       - name: Python Command
         run: |
           import platform
@@ -24,12 +24,12 @@ jobs:
       - name: checking os Windows
         run: |
           Get-Location
-          code -v
+          ruby -v
   run-mac-commands:
     runs-on: macos-latest
     steps: 
       - name: checking os Mac
         run: |
           uname -a
-          code -v
+          xcodebuild -version
 
