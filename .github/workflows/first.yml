@@ -3,7 +3,7 @@ name: Shell Commands
 on: [push]
 
 jobs:
-  run-shell-command:
+  run-on-linux:
     runs-on: ubuntu-latest
     steps:
       - name: checking os linux
@@ -18,18 +18,19 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-  run-windows-commands:
+  run-on-windows:
     runs-on: windows-latest
     steps:
       - name: checking os Windows
         run: |
           Get-Location
           ruby -v
-  run-mac-commands:
+  run-on-mac:
     runs-on: macos-latest
     steps: 
       - name: checking os Mac
         run: |
           uname -a
+          ruby -v
           xcodebuild -version
 
